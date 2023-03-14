@@ -19,3 +19,78 @@ body{
     background: #fff;
     border-radius: 7px;
 }
+.container .tittle {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .tittle::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+}
+
+.container form .book-details{
+    display: flex;
+    flex-wrap: wrap; /* placed the labels and the inputs in 2 columnns*/
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .book-details .input-box{
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+.book-details .input-box .datail{
+    display: block; /* gave the space between the lables and the inputs*/
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.book-details .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease; /* Nice stuff!! time it takes the border of the input to pop-up*/
+}
+input input:focus,
+ input:valid{
+    border-color: #9b59b6;
+}
+
+form .button{
+    height: 45px;
+    margin: 10px 0;
+}
+
+form .button input{
+    height: 70%;
+    width: 69%;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin-left: 40px;
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
