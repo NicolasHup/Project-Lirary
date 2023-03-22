@@ -67,10 +67,6 @@ form .book-details .input-box{
     border-bottom-width: 2px;
     transition: all 0.3s ease; /* Nice stuff!! time it takes the border of the input to pop-up*/
 }
-input input:focus,
- input:valid{
-    border-color: #9b59b6;
-}
 
 form .button{
     height: 45px;
@@ -92,5 +88,9 @@ form .button input{
 
 form .button input:hover{
     background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+div.check-box{
+    margin-left: 40px;
 }
 
