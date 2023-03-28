@@ -26,6 +26,9 @@ body{
 
 div.main-title{
     grid-area: welcome;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #fff;
     border-radius: 7px;
 }
@@ -38,8 +41,20 @@ div.left-form{
 div.right-library{
     grid-area: book-list;
     display: grid;
+    grid-template-rows: 1fr 6.2fr;
+    grid-template-areas: 
+        "title"
+        "books";
     background: #fff;
     border-radius: 7px;
+}
+
+div.tittle{
+    grid-area: title;
+}
+
+div.books-library{
+    grid-area: books;
 }
 
 .form-card{
