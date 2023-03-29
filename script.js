@@ -22,6 +22,8 @@ function render(){
   libraryEl.innerHTML = "";
   for(let i = 0; i < myLibrary.length; i++){
     let book = myLibrary[i];
+
+  //Creates a div for a card that contains form infor about the created book
     let bookEl = document.createElement("div");
     bookEl.innerHTML = `
       <p>Title: ${book.title}</p>
@@ -29,7 +31,8 @@ function render(){
       <p>Pages:${book.pages}</p>
       <p>ISBN : ${book.isbn}</p>
       <p>Date :${book.date}</p>
-      <p>${book.read ? "Read" : "Not Yet Read"}</p>`;
+      <p>${book.read ? "Read" : "Not Yet Read"}</p>
+      <input type="submit" value="Delete">`;
     libraryEl.appendChild(bookEl);
   }
 }

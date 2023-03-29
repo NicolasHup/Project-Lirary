@@ -51,24 +51,29 @@ div.right-library{
 
 div.tittle{
     grid-area: title;
+    display: flex;
 }
 
 div.books-library{
     grid-area: books;
-    resize: both;
-    overflow: auto;
+    overflow-y: auto;
+    max-height: 350px;
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(270px, 270px));
     column-gap: 10px;
     row-gap: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 div.books-library div{
+    display: grid;
+    align-items: center;
     background-color:#fff;
     border-radius: 10px;
+    padding: 15px;
 }
 
 
