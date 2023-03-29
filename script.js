@@ -30,6 +30,12 @@ function Book(title, author, pages, isbn, date, read){
 
 }
 
+function render(){
+  let libraryBook = document.getElementById("library");
+  for(let i = 0; i < myLibrary.length; i++){
+    console.log(myLibrary[i]);
+  }
+}
 
 function addBookToLibrary() {
   // do stuff here
@@ -40,11 +46,12 @@ function addBookToLibrary() {
   let date = document.getElementById("date").value;
   let read = document.getElementById("read").checked;
   let newBook = new Book(title, author, pages, isbn, date, read);
-  console.log(newBook);
+  myLibrary.push(newBook);
+  render();
 }
 
 
-document.querySelector("#form-book").addEventListener("submit", function(){
+document.querySelector("#form-book").addEventListener("submit", function(event){
   event.preventDefault();
   addBookToLibrary();
 });
