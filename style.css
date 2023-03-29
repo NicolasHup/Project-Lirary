@@ -29,7 +29,7 @@ div.main-title{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background-color:#e2e8f0;
     border-radius: 7px;
 }
 
@@ -45,7 +45,7 @@ div.right-library{
     grid-template-areas: 
         "title"
         "books";
-    background: #fff;
+    background-color:#e2e8f0;
     border-radius: 7px;
 }
 
@@ -55,12 +55,27 @@ div.tittle{
 
 div.books-library{
     grid-area: books;
+    resize: both;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    column-gap: 10px;
+    row-gap: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 50px;
 }
+
+div.books-library div{
+    background-color:#fff;
+    border-radius: 10px;
+}
+
 
 .form-card{
     max-width: 350px;
     width: 100%;
-    background: #fff;
+    background-color:#e2e8f0;
     border-radius: 7px;
 }
 .form-card .tittle {

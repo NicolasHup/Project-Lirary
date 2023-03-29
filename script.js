@@ -24,12 +24,12 @@ function render(){
     let book = myLibrary[i];
     let bookEl = document.createElement("div");
     bookEl.innerHTML = `
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <p>${book.pages}</p>
-      <p>${book.isbn}</p>
-      <p>${book.date}</p>
-      <p>${book.read}</p>`;
+      <p>Title: ${book.title}</p>
+      <p>Autor: ${book.author}</p>
+      <p>Pages:${book.pages}</p>
+      <p>ISBN : ${book.isbn}</p>
+      <p>Date :${book.date}</p>
+      <p>${book.read ? "Read" : "Not Yet Read"}</p>`;
     libraryEl.appendChild(bookEl);
   }
 }
