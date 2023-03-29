@@ -1,22 +1,7 @@
 
-// collecting data from form
+//mylibrary array 
 
-let myLibrary = [{
-  title: 'Book1',
-  author: 'me',
-  pages: 25,
-  isbn: 'dsfde342424',
-  date: '2022-04-15',
-  read: true
-},
-{
-  title: 'Book2',
-  author: 'you',
-  pages: 2588,
-  isbn: 'dsfde342424',
-  date: '2022-04-15',
-  read: false
-}];
+let myLibrary = [];
 
 
 function Book(title, author, pages, isbn, date, read){
@@ -30,10 +15,22 @@ function Book(title, author, pages, isbn, date, read){
 
 }
 
+//function that loops through mylibrary array
+
 function render(){
-  let libraryBook = document.getElementById("library");
+  let libraryEl= document.querySelector(".books-library");
+  libraryEl.innerHTML = "";
   for(let i = 0; i < myLibrary.length; i++){
-    console.log(myLibrary[i]);
+    let book = myLibrary[i];
+    let bookEl = document.createElement("div");
+    bookEl.innerHTML = `
+      <p>${book.title}</p>
+      <p>${book.author}</p>
+      <p>${book.pages}</p>
+      <p>${book.isbn}</p>
+      <p>${book.date}</p>
+      <p>${book.read}</p>`;
+    libraryEl.appendChild(bookEl);
   }
 }
 
