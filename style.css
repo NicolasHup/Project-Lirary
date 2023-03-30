@@ -62,7 +62,7 @@ div.books-library{
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, minmax(270px, 270px));
     column-gap: 10px;
-    row-gap: 30px;
+    row-gap: 10px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
@@ -148,7 +148,7 @@ form .button{
 
 form .button input{
     height: 80%;
-    width: 87%;
+    width: 40%;
     color: #fff;
     border: none;
     border-radius: 5px;
