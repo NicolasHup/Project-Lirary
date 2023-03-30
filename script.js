@@ -31,10 +31,17 @@ function render(){
       <p>Pages:${book.pages}</p>
       <p>ISBN : ${book.isbn}</p>
       <p>Date :${book.date}</p>
-      <p>${book.read ? "Read" : "Not Yet Read"}</p>
-      <input type="submit" value="Delete">`;
+      <input type="submit" value=${book.read ? "Read yess" : "NotRead"}>
+      <button class="delete-btn" onclick="deleteBook (${i})">Delete</buton>`;
     libraryEl.appendChild(bookEl);
   }
+}
+
+// function that deletes a book in  the library 
+
+function deleteBook(index){
+  myLibrary.splice(index, 1)
+  render()
 }
 
 function addBookToLibrary() {
