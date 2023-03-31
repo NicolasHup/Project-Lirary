@@ -26,14 +26,18 @@ function render(){
   //Creates a div for a card that contains form infor about the created book
     let bookEl = document.createElement("div");
     bookEl.innerHTML = `
-      <p>Title : ${book.title}</p>
-      <p>Autor : ${book.author}</p>
-      <p>Pages :${book.pages}</p>
-      <p>ISBN : ${book.isbn}</p>
-      <p>Date :${book.date}</p>
-      <p>Status :${book.read ? "Read" : "Not Yet Read"}</p>
-      <button class="status-btn" >Change Status</buton>
-      <button class="delete-btn" onclick="deleteBook (${i})">Delete</buton>`;
+      <div class="top">
+        <p>Title : ${book.title}</p>
+        <p>Autor : ${book.author}</p>
+        <p>Pages :${book.pages}</p>
+        <p>ISBN : ${book.isbn}</p>
+        <p>Date :${book.date}</p>
+        <p>Status :${book.read ? "Read" : "Not Yet Read"}</p>
+      </div>
+      <div class="bottom">
+        <button class="status-btn" >Change Status</buton>
+        <button class="delete-btn" onclick="deleteBook (${i})">Delete</buton>
+      </div>`;
     libraryEl.appendChild(bookEl);
   }
 }

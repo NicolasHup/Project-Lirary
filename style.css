@@ -41,7 +41,7 @@ div.left-form{
 div.right-library{
     grid-area: book-list;
     display: grid;
-    grid-template-rows: 1fr 6.2fr;
+    grid-template-rows: 0.7fr 6.2fr;
     grid-template-areas: 
         "title"
         "books";
@@ -57,7 +57,7 @@ div.tittle{
 div.books-library{
     grid-area: books;
     overflow-y: auto;
-    max-height: 350px;
+    max-height: 448px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, minmax(270px, 270px));
@@ -73,7 +73,7 @@ div.books-library div{
     align-items: center;
     background-color:#fff;
     border-radius: 10px;
-    padding: 15px;
+    padding: 5px;
 }
 
 
@@ -135,10 +135,16 @@ form .book-details .input-box{
     outline: none;
     border-radius: 5px;
     border: 1px solid #ccc;
+    padding: 17px;
     padding-left: 8px;
-    font-size: 16px;
+    font-size: 14px;
+    color: rgb(139, 139, 139);
     border-bottom-width: 2px;
     transition: all 0.3s ease; /* Nice stuff!! time it takes the border of the input to pop-up*/
+}
+
+.book-details .input-box input:focus{
+    border-color: #9b59b6;
 }
 
 form .button{
@@ -153,14 +159,43 @@ form .button input{
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: bolder;
     letter-spacing: 1px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
     margin-left: 20px;
 }
 
+form .button input:hover{
+    background:  linear-gradient(135deg, #9b59b6, #71b7e6);
+    transform: rotate(360deg);
+    transform: scale(1.01);
+}
+
 
 div.check-box{
     margin-left: 100px;
+}
+
+div button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: #fff;
+    font-weight: bolder;
+}
+
+button.delete-btn:hover{
+    background: red;
+    color: #fff;
+}
+
+button.status-btn:hover{
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #fff;
+}
+
+div.top{
+    padding-bottom: 0px;
 }
 
