@@ -27,19 +27,24 @@ function render(){
     let bookEl = document.createElement("div");
     bookEl.innerHTML = `
       <div class="top">
-        <p>Title :    ${book.title}</p>
+        <p>Title : ${book.title}</p>
         <p>Autor : ${book.author}</p>
-        <p>Pages :${book.pages}</p>
+        <p>Pages : ${book.pages}</p>
         <p>ISBN : ${book.isbn}</p>
-        <p>Date :${book.date}</p>
-        <p>Status :${book.read ? "Read" : "Not Yet Read"}</p>
+        <p>Date : ${book.date}</p>
+        <p id="status"> Status : ${book.read ? "Read" : "Not Yet Read"}</p>
       </div>
       <div class="bottom">
-        <button class="status-btn" >Change Status</buton>
+        <button class="status-btn" onclick="changeText()" >Change Status</buton>
         <button class="delete-btn" onclick="deleteBook (${i})">Delete</buton>
       </div>`;
     libraryEl.appendChild(bookEl);
   }
+}
+
+function changeText() {
+  var paragraph = document.getElementById("status");
+  paragraph.innerHTML = "This is the new text.";
 }
 
 // function that deletes a book in  the library 

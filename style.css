@@ -41,7 +41,7 @@ div.left-form{
 div.right-library{
     grid-area: book-list;
     display: grid;
-    grid-template-rows: 0.7fr 6.2fr;
+    grid-template-rows: 0.7fr 6fr;
     grid-template-areas: 
         "title"
         "books";
@@ -57,7 +57,7 @@ div.tittle{
 div.books-library{
     grid-area: books;
     overflow-y: auto;
-    max-height: 448px;
+    max-height: 428px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, minmax(270px, 270px));
