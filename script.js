@@ -27,7 +27,7 @@ function render(){
     let bookEl = document.createElement("div");
     bookEl.innerHTML = `
       <div class="top">
-        <p>Title : ${book.title}</p>
+        <p>Title :    ${book.title}</p>
         <p>Autor : ${book.author}</p>
         <p>Pages :${book.pages}</p>
         <p>ISBN : ${book.isbn}</p>

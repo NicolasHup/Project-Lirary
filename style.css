@@ -196,6 +196,8 @@ button.status-btn:hover{
 }
 
 div.top{
+    color: rgb(110, 109, 109);
+    font-size: 14px;
     padding-bottom: 0px;
 }
 
