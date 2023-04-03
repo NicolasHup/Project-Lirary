@@ -15,6 +15,16 @@ function Book(title, author, pages, isbn, date, read){
 
 }
 
+Book.prototype.toggleRead = function (){
+  this.read = !this.read;
+}
+
+function toggleRead(index){
+  myLibrary[index].toggleRead();
+  render()
+}
+
+
 //function that loops through mylibrary array
 
 function render(){
@@ -35,19 +45,24 @@ function render(){
         <p id="status"> Status : ${book.read ? "Read" : "Not Yet Read"}</p>
       </div>
       <div class="bottom">
-        <button class="status-btn" onclick="changeText()" >Change Status</buton>
+        <button class="status-btn" onclick="toggleRead(${i})" >Change Status</buton>
         <button class="delete-btn" onclick="deleteBook (${i})">Delete</buton>
       </div>`;
     libraryEl.appendChild(bookEl);
   }
 }
 
+/*
+// fuction that toggles the read status
+
 function changeText() {
   var paragraph = document.getElementById("status");
   paragraph.innerHTML = "This is the new text.";
 }
 
-// function that deletes a book in  the library 
+*/
+
+// function that deletes a book in the library 
 
 function deleteBook(index){
   myLibrary.splice(index, 1)
