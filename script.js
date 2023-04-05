@@ -15,6 +15,7 @@ function Book(title, author, pages, isbn, date, read){
 
 }
 
+//Change read status
 Book.prototype.toggleRead = function (){
   this.read = !this.read;
 }
